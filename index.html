@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="images/list-solid-full.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo-list</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="section content">
+        <article class="formulaire_tache">
+          <div class="titre">
+            <h1>Ma - Todo - list</h1>
+          </div>
+          <form action="" method="post" class="form">
+            <label for="tache"></label>
+            <input
+              type="text"
+              name="tache"
+              id="tache"
+              placeholder="Nouvelle tâche..."
+              required
+            />
+            <input type="submit" value="Ajouter" />
+          </form>
+          <ul class="list_tache"></ul>
+        </article>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
