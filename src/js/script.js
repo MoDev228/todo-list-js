@@ -17,8 +17,10 @@ form.addEventListener("submit", (event) => {
     const textElement = document.createElement("span");
 
     const boutonSupprimer = document.createElement("button");
+    boutonSupprimer.classList.add("btn-supp");
 
     const boutonModifier = document.createElement("button");
+    boutonModifier.classList.add("btn-mod");
 
     let ancienneValeur;
 
