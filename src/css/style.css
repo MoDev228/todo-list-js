@@ -1,166 +1,170 @@
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-bg: hsl(210, 58%, 5%);
-    --color-surface: oklch(20% 0.02 250);
-    --color-text: hsl(213, 35%, 94%);
+  --color-bg: hsl(210, 58%, 5%);
+  --color-surface: oklch(20% 0.02 250);
+  --color-text: hsl(213, 35%, 94%);
 }
 
 @font-face {
-    font-family: "Source Code Pro";
-    src: url("/fonts/SourceCodePro-VaribleFont_wght.ttf");
+  font-family: "Source Code Pro";
+  src: url(/fonts/SourceCodePro-VaribleFont_wght.ttf);
 }
 
 input,
 button {
-    border: none;
-    color: inherit;
-    background: transparent;
+  border: none;
+  color: inherit;
+  background: transparent;
 }
 
 body {
-    background: var(--color-bg);
-    color: var(--color-text);
-    font-family: "Source Code Pro", monospace;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Source Code Pro", monospace;
 }
 
 .container {
-    width: 100%;
-    max-width: 1200px;
-    margin-inline: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 
 .formulaire_tache {
-    width: 100%;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    background: var(--color-surface);
-    border-radius: 1rem;
+  width: 100%;
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titre {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-    margin-bottom: 2rem;
-    text-align: center;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 label {
-    display: none;
+  display: none;
 }
 
 .form {
-    width: 100%;
-    display: flex;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
 }
 
 input {
-    height: 3rem;
-    font-size: 1.2rem;
+  height: 3rem;
+
+  font-size: 1.2rem;
 }
 
 input[type="text"] {
-    width: 70%;
-    color: hsl(from var(--color-text) h s calc(l - 50%));
-    border: 1px solid hsl(from var(--color-text) h s calc(l - 50%));
-    border-radius: 1rem;
-    padding: 1rem;
-    outline: none;
+  width: 70%;
+  color: hsl(from var(--color-text) h s calc(l - 50));
+  border: 1px solid hsl(from var(--color-text) h s calc(l - 50));
+  border-radius: 1rem;
+  padding: 1rem;
+  outline: none;
+
+  /*color: blanchedalmond;*/
 }
 
 input[type="submit"] {
-    flex: 1;
-    background: hsl(from var(--color-bg) h calc(s + 10%) calc(l + 40%));
-    border-radius: 1rem;
-    border: 1px solid hsl(from var(--color-bg) h calc(s + 10%) calc(l + 40%));
-    cursor: pointer;
-    font-weight: 700;
-    transition: background 0.3s ease;
+  flex: 1;
+  background: hsl(from var(--color-bg) h calc(s + 10) calc(l + 40));
+  border-radius: 1rem;
+  border: 1px solid hsl(from var(--color-bg) h calc(s + 10) calc(l + 40));
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background: hsl(from var(--color-bg) h calc(s + 10%) calc(l + 10%));
+  background: hsl(from var(--color-bg) h calc(s + 10) calc(l + 10));
 }
 
 .list_tache {
-    width: 100%;
-    height: 60vh;
-    border: 1px solid #ffffff3d;
-    border-radius: 1rem;
-    overflow: auto;
-    margin-top: 1rem;
+  width: 100%;
+  height: 60vh;
+  border: 1px solid #ffffff3d;
+  border-radius: 1rem;
+  overflow: auto;
+  margin-top: 1rem;
 }
 
 .list_tache li {
-    background: hsl(from var(--color-bg) h calc(s + 10%) calc(l + 10%));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: circle;
-    gap: 1rem;
-    height: 60px;
-    border-bottom: 2px solid var(--color-bg);
-    transition: background 0.3s ease;
+  background: hsl(from var(--color-bg) h calc(s + 10) calc(l + 10));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: circle;
+  gap: 1rem;
+  height: 60px;
+
+  border-bottom: 2px solid var(--color-bg);
+  transition: all 0.3s ease;
 }
 
 .list_tache li:hover {
-    background: hsl(from var(--color-bg) h calc(s + 10%) calc(l + 13%));
+  background: hsl(from var(--color-bg) h calc(s + 10) calc(l + 13));
 }
 
 .list_tache span,
 .list_tache input {
-    width: 65%;
-    margin-left: 1rem;
+  width: 65%;
+  margin-left: 1rem;
 }
 
 .terminee span {
-    text-decoration: line-through;
-    opacity: 0.4;
+  text-decoration: line-through;
+  opacity: 0.4;
+  transition: 0.3s;
 }
 
 .list_tache button {
-    margin-right: 1rem;
-    padding: 0.8rem;
-    cursor: pointer;
-    border-radius: 1rem;
-    font-weight: 600;
-    transition: background 0.3s ease;
+  margin-right: 1rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-weight: 600;
 }
 
 .btn-supp {
-    background: hsl(0, 100%, 50%);
-    border: 1px solid hsl(0, 100%, 50%);
+  background: hsl(0, 100%, 50%);
+  border: 1px solid hsl(0, 100%, 50%);
+  transition: 0.3s;
 }
 
 .btn-mod {
-    background: hsl(300, 76%, 72%);
-    border: 1px solid hsl(300, 76%, 72%);
+  background: hsl(300, 76%, 72%);
+  border: 1px solid hsl(300, 76%, 72%);
+  transition: 0.3s;
 }
 
 .btn-supp:hover,
 .btn-mod:hover {
-    background: transparent;
+  background: inherit;
 }
 
 .list_tache input {
-    outline: none;
-    background: var(--color-bg);
-    border-radius: 0.5rem;
-    padding-left: 1rem;
+  outline: none;
+  background: var(--color-bg);
+  border-radius: 0.5rem;
+  padding-left: 1rem;
 }
